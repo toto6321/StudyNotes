@@ -1,6 +1,98 @@
-# Javascript
+# JavaScript Newbie
+
+#### Main References:
+
+* https://www.w3schools.com/js/default.asp
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+
 
 ## JavaScript Syntax
+
+### JS DATA Type
+
+* Primitives Data Types 
+  * undefined
+  * Boolean
+    * true
+    * false
+  * Number
+    * number 
+      * 64 bits  double-precision floating-point 
+        * sign bit: 1
+        * exponent bits: 11
+        * significand precision: 53
+      * Integar: -(2^53-1) to 2^53-1, aka, Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER)
+      * 0 === -0 === +0
+    * Infinity
+    * -Infinity
+    * NaN
+  * String
+  * BigInt
+  * Symbol
+* special primitive type
+  * null
+* special non-data but structural type
+  * Object
+* a non-data structure
+  * Function
+
+
+
+```javascript
+typeof undefined // "undefined"
+
+typeof Boolean // "function"
+typeof Number // "function"
+typeof String // "function"
+typeof BigInt // "function"
+typeof Symbol // "function"
+
+typeof null // "object"
+typeof Object // "function"
+typeof Function // "function"
+
+typeof 
+```
+
+
+
+
+
+### JS Type Conversion
+
+| Original Value   | Converted to Number               | Converted to String | Converted to Boolean |
+| ---------------- | --------------------------------- | ------------------- | -------------------- |
+| false            | 0                                 | "false"             | false                |
+| true             | 1                                 | "true"              | true                 |
+| 0                | 0                                 | "0"                 | false                |
+| 1                | 1                                 | "1"                 | true                 |
+| "0"              | 0                                 | "0"                 | <strong style="color:red">true</strong> |
+| "000"            | 0                                 | "000"               | <strong style="color:red">true</strong> |
+| "1"              | 1                                 | "1"                 | true                 |
+| NaN              | NaN                               | "NaN"               | false                |
+| Infinity         | Infinity                          | "Infinity"          | true                 |
+| -Infinity        | -Infinity                         | "-Infinity"         | true                 |
+| ""               | 0                                 | ""                  | <strong style="color:red">false</strong> |
+| "20"             | 20                                | "20"                | true                 |
+| "twenty"         | NaN                               | "twenty"            | true                 |
+| [ ]              | 0                                 | ""                  | <strong style="color:red">true</strong> |
+| [20]             | <strong style="color:red">20</strong> | "20"                | true                 |
+| [10,20]          | <strong style="color:red">NaN</strong> | "10,20"            | true                 |
+| ["twenty"]       | NaN                               | "twenty"            | true                 |
+| ["ten","twenty"] | NaN                               | "ten,twenty"       | true                 |
+| function(){}     |        <strong style="color:red">NaN</strong>                           | <strong style="color:red">"function(){}"</strong> | <strong style="color:red">true</strong> |
+| { }              | <strong style="color:red">NaN</strong> | <strong style="color:red">"[object Object]"</strong> | <strong style="color:red">true</strong> |
+| null             | <strong style="color:red">0</strong>   | "null"              | false                |
+| undefined        | NaN                               | "undefined"         | false                |
+
+```javascript
+(!(~+[])+{})[--[~+""][+[]]*[~+[]] + ~~!+[]]+({}+[])[[~!+[]]*~+[]]
+
+// 'sb'
+```
+
+
 
 
 
@@ -8,15 +100,17 @@
 
 ## JavaScript Objects
 
+### JS  equal assignment vs shadow copy vs JS deep copy
 
-
-
+#### '=': equal assignment
+#### shadow copy
+#### deep copy
 
 ## JavaScript Functions
 
 JavaScript functions are **defined** with the `function` keyword.
 
-### Function Declaratons
+### Function Declarations
 
 ```javascript
 function functionName(parameters) {
