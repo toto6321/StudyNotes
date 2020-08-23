@@ -1,4 +1,4 @@
-# JavaScript Newbie
+# JavaScript
 
 #### Main References:
 
@@ -9,7 +9,7 @@
 
 ## JavaScript Syntax
 
-### JS DATA Type
+### JS Data Type
 
 * Primitives Data Types 
   * undefined
